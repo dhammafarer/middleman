@@ -7,7 +7,7 @@ publish_mode: editorial_workflow
 
 media_folder: "source/images"
 
-public_folder: "build/images"
+public_folder: "images"
 
 collections:
   - name: "blog"
