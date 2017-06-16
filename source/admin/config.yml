@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: dhammafarer/middleman
+  branch: master
+  publish_mode: editorial_workflow
+
+media_folder: "source/images"
+
+public_folder: "build/images"
+
+collections:
+  - name: "blog"
+    label: "blog"
+    folder: "source/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}--{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string", default: "title"}
+      - {label: "Body", name: "body", widget: "markdown"}
