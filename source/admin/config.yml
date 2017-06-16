@@ -19,10 +19,19 @@ collections:
       - {label: "Title", name: "title", widget: "string", default: "title"}
       - {label: "Body", name: "body", widget: "markdown"}
 
-  - name: "authors"
-    label: "Authors"
-    folder: "data"
-    file: "authors.yml"
-    description: "Author descritions"
-    fields:
-      - {label: "Name", name: "name", widget: "string"}
+  - name: "settings"
+    label: "Settings"
+    editor:
+      preview: false
+    files:
+      - name: "authors"
+        label: "Authors"
+        file: "data/authors.yml"
+        description: "Author descriptions"
+        fields:
+          - name: authors
+            label: Authors
+            widget: list
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Description", name: "description", widget: "markdown"}
