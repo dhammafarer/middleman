@@ -25,11 +25,11 @@ page '/404.html', directory_index: false
 
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
-  # blog.prefix = "blog"
+  blog.prefix = "blog"
 
-  blog.permalink = "/blog/{title}.html"
+  blog.permalink = "{title}.html"
   # Matcher for blog source files
-  # blog.sources = "/blog/{year}-{month}-{day}-{title}.html"
+  blog.sources = "{year}-{month}-{day}-{title}.html"
   # blog.taglink = "tags/{tag}.html"
   # blog.layout = "layout"
   # blog.summary_separator = /(READMORE)/
@@ -37,7 +37,7 @@ activate :blog do |blog|
   # blog.year_link = "{year}.html"
   # blog.month_link = "{year}/{month}.html"
   # blog.day_link = "{year}/{month}/{day}.html"
-  # blog.default_extension = ".markdown"
+  blog.default_extension = ".md"
 
   blog.tag_template = "tag.html"
   blog.calendar_template = "calendar.html"
