@@ -18,3 +18,11 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string", default: "title"}
       - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "authors"
+    label: "Authors"
+    folder: "data"
+    file: "authors.yml"
+    description: "Author descritions"
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
